@@ -18,7 +18,6 @@ public class DemoSecurityConfig extends WebSecurityConfigurerAdapter {
 	DataSource ds;
 	@Override
 	protected void configure(AuthenticationManagerBuilder auth) throws Exception {
-		UserBuilder users = User.withDefaultPasswordEncoder();
 		auth.jdbcAuthentication().dataSource(ds);
 	}
 	@Override
